@@ -1,0 +1,189 @@
+/* =========================== ALGEMENE BODY STIJL =========================== */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ABE2, #5563DE);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
+/* =========================== CONTAINER STIJL =========================== */
+.container {
+    max-width: 600px;
+    width: 90%;
+    background: #fff;
+    color: #333;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: none;
+}
+
+.container.active {
+    display: block;
+}
+
+/* =========================== INPUT VELDEN =========================== */
+input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* =========================== KNOPPEN STIJL =========================== */
+button {
+    background: #5563DE;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+button:hover {
+    background: #3f4cb8;
+}
+
+/* =========================== INTRO TEKST =========================== */
+.intro h1 em {
+    color: #FFD700;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* =========================== THEMA SELECTIE =========================== */
+.themas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.thema {
+    background: #5563DE; /* blauw */
+    color: #ffffff; /* witte tekst */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* cirkelvorm */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+
+.thema:hover {
+    transform: translateY(-5px);
+    background: #3f4cb8; /* donkerder blauw bij hover */
+}
+
+.thema a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* =========================== QUIZ CONTAINER =========================== */
+.quiz-image-timer {
+    display: flex;
+    justify-content: center;  /* afbeelding horizontaal centreren */
+    align-items: center;      /* verticale centrering */
+    position: relative;       /* voor absolute positionering timer */
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.image-placeholder {
+    width: 150px;
+    height: 150px;
+    background: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.quiz-container .image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.quiz-container .teamname {
+    font-weight: bold;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+/* =========================== ANTWOORDEN IN GRID 2x2 =========================== */
+.answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolommen */
+    gap: 1rem; /* ruimte tussen de knoppen */
+    margin-top: 1rem;
+}
+
+.answers button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* =========================== TIMER ALS ORANJE CIRKEL RECHTS =========================== */
+.timer {
+    position: absolute;
+    right: 0;                  /* helemaal rechts in container */
+    top: 50%;                  /* verticaal midden */
+    transform: translateY(-50%);
+    width: 80px;
+    height: 80px;
+    background-color: #df5e13; /* oranje */
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* =========================== FEEDBACK (goed/fout) =========================== */
+.feedback {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.feedback.correct {
+    color: green;
+}
+
+.feedback.wrong {
+    color: red;
+}
+
+/* =========================== RESULTATEN =========================== */
+#result-details {
+    text-align: left;
+    margin: 1rem 0;
+}
+
+/* =========================== SCOREBOARD =========================== */
+#scoreboard {
+    margin: 1rem 0;
+}
